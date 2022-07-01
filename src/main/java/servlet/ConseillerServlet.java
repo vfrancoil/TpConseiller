@@ -32,7 +32,6 @@ public class ConseillerServlet extends HttpServlet {
 		if(request.getParameter("supprimer") != null) {
 			service.deleteConseiller(Integer.parseInt(request.getParameter("idC")) );
 		} else if(request.getParameter("modifier") != null) {
-			System.out.println(request.getParameter("idC"));
 			Conseiller c = new Conseiller();
 			c.setName(request.getParameter("name"));
 			c.setFirstName(request.getParameter("firstname"));
@@ -40,8 +39,9 @@ public class ConseillerServlet extends HttpServlet {
 			c.setSalary(Integer.parseInt(request.getParameter("salary")));
 			service.updateConseiller(c, Integer.parseInt(request.getParameter("idC")) );
 		}
-		RequestDispatcher disp = request.getRequestDispatcher("gestionConseiller.jsp");
-		disp.forward(request, response);
+		response.sendRedirect("/TpConseiller/MainServlet");
+//		RequestDispatcher disp = request.getRequestDispatcher("index.jsp");
+//		disp.forward(request, response);
 	}
 
 }

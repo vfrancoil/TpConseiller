@@ -33,7 +33,7 @@
 			<tr>
 				<th colspan="2"><input type="submit" name="modifier" value="Modifier" /></th>
 				<th colspan="2"><input type="submit" name="supprimer" value="Supprimer" /></th>
-				<th><input type="text" name="idC" value="${ c.id }" disabled/></th>
+				<th><input type="hidden" name="idC" value="${ c.id }"/></th>
 			</tr>
 		</table>
 </form>
