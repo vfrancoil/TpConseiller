@@ -2,25 +2,37 @@ package model;
 
 import java.time.LocalDate;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Conseiller {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private String name;
 	private String firstName;
 	private LocalDate dob;
 	private int salary;
-	private String numConsiller;
+	private String numConseiller;
 	private LocalDate dateCreation;
 
-	public Conseiller(int id, String name, String firstName, LocalDate dob, int salary, String numConsiller,
+	public Conseiller(String name, String firstName, LocalDate dob, int salary, String numConsiller,
 			LocalDate dateCreation) {
 		super();
-		this.id = id;
 		this.name = name;
 		this.firstName = firstName;
 		this.dob = dob;
 		this.salary = salary;
-		this.numConsiller = numConsiller;
+		this.numConseiller = numConsiller;
 		this.dateCreation = dateCreation;
+	}
+	
+	public Conseiller() {
+		
 	}
 
 	public int getId() {
@@ -63,12 +75,12 @@ public class Conseiller {
 		this.salary = salary;
 	}
 
-	public String getNumConsiller() {
-		return numConsiller;
+	public String getNumConseiller() {
+		return numConseiller;
 	}
 
-	public void setNumConsiller(String numConsiller) {
-		this.numConsiller = numConsiller;
+	public void setNumConseiller(String numConsiller) {
+		this.numConseiller = numConsiller;
 	}
 
 	public LocalDate getDateCreation() {
@@ -79,4 +91,11 @@ public class Conseiller {
 		this.dateCreation = dateCreation;
 	}
 
+	@Override
+	public String toString() {
+		return "Conseiller [id=" + id + ", name=" + name + ", firstName=" + firstName + ", dob=" + dob + ", salary="
+				+ salary + ", numConsiller=" + numConseiller + ", dateCreation=" + dateCreation + "]";
+	}
+
+	
 }
