@@ -32,14 +32,7 @@ public class ConseillerDao implements IDao {
 			}
 			e.printStackTrace();
 			return false;
-		} finally {
-			if (em != null) {
-				em.close();
-			}
-			if (emf != null) {
-				emf.close();
-			}
-		}
+		} 
 		return false;
 	}
 
@@ -58,14 +51,7 @@ public class ConseillerDao implements IDao {
 				txn.rollback();
 			}
 			e.printStackTrace();
-		} finally {
-			if (em != null) {
-				em.close();
-			}
-			if (emf != null) {
-				emf.close();
-			}
-		}
+		} 
 		return result;
 	}
 
@@ -87,13 +73,6 @@ public class ConseillerDao implements IDao {
 			}
 			e.printStackTrace();
 			return false;
-		} finally {
-			if (em != null) {
-				em.close();
-			}
-			if (emf != null) {
-				emf.close();
-			}
 		}
 		return true;
 	}
@@ -113,14 +92,7 @@ public class ConseillerDao implements IDao {
 			}
 			e.printStackTrace();
 			return false;
-		} finally {
-			if (em != null) {
-				em.close();
-			}
-			if (emf != null) {
-				emf.close();
-			}
-		}
+		} 
 		return true;
 	}
 

@@ -9,31 +9,31 @@
 <body>
 
 	<div>
-<form action="MainServlet" method="post">
+<form action="ConseillerServlet" method="post">
 		<table>
 			<caption>Gestion conseiller</caption>
-
 			<tr>
 				<th>Nom :</th>
-				<th><input type="text" name="name" /></th>
+				<th><input type="text" name="name" value="${ c.name }" /></th>
 				<th>Prénom :</th>
-				<th><input type="text" name="firstname" /></th>
+				<th><input type="text" name="firstname" value="${ c.firstName }" /></th>
 			</tr>
 			<tr>
 				<th>Date de naissance :</th>
-				<th><input type="text" name="dob" /></th>
+				<th><input type="date" name="dob" value="${ c.dob }" /></th>
 				<th>Salaire :</th>
-				<th><input type="text" name="salary" /></th>
+				<th><input type="text" name="salary" value="${ c.salary }" /></th>
 			</tr>
 			<tr>
 				<th>Numéro conseiller :</th>
-				<th><input type="text" name="numConseiller" /></th>
+				<th><input type="text" name="numConseiller" value="${ c.numConseiller }" disabled/></th>
 				<th>Date de création :</th>
-				<th><input type="text" name="createDate" /></th>
+				<th><input type="text" name="createDate" value="${ c.dateCreation }" disabled/></th>
 			</tr>
 			<tr>
 				<th colspan="2"><input type="submit" name="modifier" value="Modifier" /></th>
 				<th colspan="2"><input type="submit" name="supprimer" value="Supprimer" /></th>
+				<th><input type="text" name="idC" value="${ c.id }" disabled/></th>
 			</tr>
 		</table>
 </form>
