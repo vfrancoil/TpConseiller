@@ -4,7 +4,7 @@ import java.util.List;
 
 import model.Conseiller;
 
-public class ConsillerService implements IConseillerService {
+public class ConseillerService implements IConseillerService {
 
 	@Override
 	public boolean addConseiller(Conseiller c) {
